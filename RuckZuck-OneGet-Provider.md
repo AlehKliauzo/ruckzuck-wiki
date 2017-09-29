@@ -27,27 +27,27 @@ Find a Software based on the Shortname:
 ```Find-Package -ProviderName RuckZuck "7-Zip"```
 
 Find a Software based on the ProductName:  
-```Find-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)```
+```Find-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)"```
 
 # Check installed Software
 Check all installed SoftwareItems that are registered in RuckZuck  
 ```Get-Package -ProviderName RuckZuck```
 
 Get a specific product and show all attributes:  
-```Get-Package -ProviderName RuckZuck "7-Zip 9.38 (x64 edition)" | fl``` 
+```Get-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)" | fl``` 
 
 # Install Software
 Install a Software based on the Shortname  
 ```Install-Package -ProviderName RuckZuck "7-Zip"```
 
 Install a Software based on the ProductName and skip the Installation of dependencies  
-```Install-Package -ProviderName RuckZuck "7-Zip 9.38 (x64 edition)" -SkipDependencies```
+```Install-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)" -SkipDependencies```
 
 Install a Software based on the Shortname and download the Content to C:\temp  
-```Install-Package -ProviderName RuckZuck "7-Zip 9.38 (x64 edition)" -LocalPath "C:\Temp"```
+```Install-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)" -LocalPath "C:\Temp"```
 
 # Uninstall Software
 Uninstall Software based on the ProductName  
-```Uninstall-Package -ProviderName RuckZuck "7-Zip 9.38 (x64 edition)"```
+```Uninstall-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)"```
 
 
