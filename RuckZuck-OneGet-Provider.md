@@ -27,7 +27,7 @@ Find a Software based on the Shortname:
 ```Find-Package -ProviderName RuckZuck "7-Zip"```
 
 Find a Software based on the ProductName:  
-```Find-Package -ProviderName RuckZuck "7-Zip 9.38 (x64 edition)"```
+```Find-Package -ProviderName RuckZuck "7-Zip 16.04 (x64)
 
 # Check installed Software
 Check all installed SoftwareItems that are registered in RuckZuck  
