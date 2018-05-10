@@ -1,5 +1,5 @@
 # Requirements
-To upload a Pacakge to the repository, you need the following Information:  
+To upload a Package to the repository, you need the following Information:  
 * Download URL(s) (public, not Password protected, from the Vendor directly or an official page)
 * Dowload the File(s)
 * Installation Parameters for a silent install
