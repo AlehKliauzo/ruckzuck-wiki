@@ -16,5 +16,8 @@ To upload a Package to the repository, you need the following Information:
 Attached an example of a filled Software-Request-Form:
 ![RZ Package](https://user-images.githubusercontent.com/11909453/39870921-59576c50-5463-11e8-81f8-f0e7baef4780.png)
 
+# Testing
+Before you upload your Package, test your package by "Create EXE" and run the executable (as Admin) on a test Client. If you do not get any erros or warnings and the Software is installed, your Package is ready.
 
+# Upload
 Click on "Upload" to publish your Software to the repository. It may take a while as every software will be verified before making it public...
