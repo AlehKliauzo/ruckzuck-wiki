@@ -28,6 +28,9 @@ Find a Software based on the ProductName:
 Check all installed SoftwareItems that are registered in RuckZuck  
 ```Get-Package -ProviderName RuckZuck```
 
+Get the ShortName of all installed SoftwareItems that are registered in RuckZuck  
+```Get-Package -ProviderName RuckZuck | select PackageFilename```
+
 Get a specific product and show all attributes:  
 ```Get-Package -ProviderName RuckZuck "7-Zip 18.06 (x64)" | fl``` 
 
