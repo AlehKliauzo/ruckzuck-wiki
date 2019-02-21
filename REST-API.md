@@ -21,10 +21,10 @@ Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/getsoftwares?name=ruc
 
 # Get Icon 
 
-## as URL
-[`https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck`](https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck)
-
 ## from ShortName
 ```powershell 
 Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck"
 ```
+
+### as URL
+[`https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck`](https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck)
