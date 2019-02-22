@@ -1,13 +1,14 @@
-# PowerShell examples
-## Get Catalog:
+# Get Catalog:
++ Description: get all Software-Products in the RuckZuck repository  
++ Syntax: **GET** ` https://{URL}/getcatalog[?customerid={customerkey}]`  
++ Response: JSON Array of Catalog-Items
+
+## PowerShell Example:
 ```powershell 
 $cat = Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/getcatalog"
-```
-
-### list ShortNames and download count
-```powershell 
 $cat | select ShortName, Downloads | Sort-Object ShortName
 ```
+
 
 ## Get Software
 ### from ShortName
