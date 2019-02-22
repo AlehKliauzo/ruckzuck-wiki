@@ -44,7 +44,7 @@ example result:
         "PreRequisites": [],
         "SWId": 19053768,
         "IconHash": "9qZUxGc2ukJWbm83ztdYZ135f",
-        "IconURL": "http://localhost:5000/rest/v2/geticon?iconhash=9qZUxGc2ukJWbm83ztdYZ135f",
+        "IconURL": "https://cdn.ruckzuck.tools/rest/v2/geticon?iconhash=9qZUxGc2ukJWbm83ztdYZ135f",
         "ShortName": "7-Zip"
     }
 ]
