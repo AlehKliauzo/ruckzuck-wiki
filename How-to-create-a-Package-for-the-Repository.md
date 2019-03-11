@@ -6,7 +6,7 @@ To upload a Package to the repository, you need the following Information:
 
 # Steps
 1. install the Software on a Client (e.g. on a VW)
-2. start RuckZuck.exe an make sure you are logged on with your RuckZuck account (gear Icon on Start Page)
+2. start RuckZuck.exe
 3. click on "Create new Software-Item"
 4. choose the previously installed Software and click on "Create new Software-Item"
 5. Fill in the URL of the downloaded Setup file(s), press [TAB] and a File-Dialog will open where you have to select the downloaded File. RuckZuck will then calculate the hash of the file or the signature.
