@@ -5,7 +5,7 @@ To upload a Package to the repository, you need the following Information:
 * Installation Parameters for a silent install
 
 # Steps
-1. install the Software on a Client (e.g. on a VW)
+1. install the Software on a Client (e.g. on a VM)
 2. start RuckZuck.exe
 3. click on "Create new Software-Item"
 4. choose the previously installed Software and click on "Create new Software-Item"
