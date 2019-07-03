@@ -7,6 +7,7 @@
 ```powershell 
 Invoke-RestMethod -Uri "https://ruckzuck.tools/rest/v2/geturl"
 ```
+> Note: Do **NOT** hardcode the URL in your project, always use GetURL to get the current URL as this URL may change.
 
 # Get Catalog:
 + Description: get all Software-Products in the RuckZuck repository  
