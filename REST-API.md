@@ -1,3 +1,13 @@
+# Get URL:
++ Description: get the current REST-API URL. CustomerID can be used in the future to redirect to private or custom repositories.
++ Syntax: **GET** ` https://ruckzuck.tools/geturl[?customerid={customerkey}]`  
++ Response: string with current URL of the REST API
+
+## PowerShell Example:
+```powershell 
+Invoke-RestMethod -Uri "https://ruckzuck.tools/rest/v2/geturl"
+```
+
 # Get Catalog:
 + Description: get all Software-Products in the RuckZuck repository  
 + Syntax: **GET** ` https://{URL}/getcatalog[?customerid={customerkey}]`  
