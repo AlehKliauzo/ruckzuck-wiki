@@ -43,6 +43,9 @@ Install a Software based on the ProductName and skip the Installation of depende
 Install a Software based on the Shortname and download the Content to C:\temp  
 ```Install-Package -ProviderName RuckZuck "7-Zip" -LocalPath "C:\Temp"```
 
+Install an older Version of a Software by using an alternative ProductName and ProductVersion:
+```Install-Package -Provider RuckZuck -Name winrar -ProductVersion "5.70.0" -ProductName "WinRAR 5.70 (64-bit)"```
+
 # Uninstall Software
 Uninstall Software based on the ProductName  
 ```Uninstall-Package -ProviderName RuckZuck "7-Zip 18.06 (x64)"```
