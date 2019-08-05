@@ -1,7 +1,6 @@
 # Installation  
 Install the MSI (x64 only) from:
-https://github.com/rzander/ruckzuck/releases/download/1.7.0.2/RuckZuck.provider.for.OneGet_x64.msi
-> Use the Parameter `WEBSERVICE=<URL>` to specify an internal Repository or [RZ.Cache](https://rzander.azurewebsites.net/ruckzuck-cache/) Server. 
+https://github.com/rzander/ruckzuck/releases/download/1.7.0.3/RuckZuck.provider.for.OneGet_x64.msi
 
 or
 
