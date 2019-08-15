@@ -4,7 +4,7 @@ https://github.com/rzander/ruckzuck/releases/download/1.7.0.4/RuckZuck.provider.
 
 or
 
-Install it from [RuckZuck.exe](https://github.com/rzander/ruckzuck/releases/download/1.7.0.2/RuckZuck.exe) ...
+Install it from [RuckZuck.exe](https://github.com/rzander/ruckzuck/releases/download/1.7.0.4/RuckZuck.exe) ...
 
 # Update
 Find all applicable Updates:  
