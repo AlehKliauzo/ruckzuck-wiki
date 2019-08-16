@@ -27,3 +27,15 @@ New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Policies\RuckZuck' -Name 'WebServi
 New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Policies\RuckZuck' -Name 'Broadcast' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 ```
 >Note: Broadcast=0 will disable the initial broadcast to find a RuckZuck Server
+
+# Caching
+The first Client who request content from the internet will trigger the server to download the file(s) to **wwwroot/content/{contentid}**. The content URL within the package will then be redirected to your localURL.
+The content within the container will be cleaned if you re-publish or update your container. To keep the content files, you can redirect **wwwroot/content** to your physical host.
+
+# known Limitations
+* Only packages with valid URLs can be cached, URL's generated from a PowerShell will still be downloaded from the clients.
+* Some packages can not be downloaded from the Server. As workaround you can copy to content to **wwwroot/content/{contentid}**
+* Download errors ca occur if multiple clients requesting the same fileand the file is not cached. As workaround, use RuckZuck.exe to pre-download files you will need.
+* The Server will not re-download content if the signature or file hash has changed. You will have to remove this content from **wwwroot/content/{contentid}**
+
+
