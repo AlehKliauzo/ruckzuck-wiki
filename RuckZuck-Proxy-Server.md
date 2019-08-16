@@ -6,7 +6,7 @@ https://cloud.docker.com/u/zanderr/repository/docker/zanderr/ruckzuck
 # Installation
 Get the container:
 ```
-docker pull zanderr/ruckzuck
+docker pull zanderr/ruckzuck:latest
 ```
 
 Start the container:
