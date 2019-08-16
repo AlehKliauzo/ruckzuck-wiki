@@ -20,7 +20,7 @@ As soon as the container is started, browse to your "localURL" and you will get 
 The Server will listen to broadcasts on UDP:5001, so RuckZuck clients within the same subnet should find the "Proxy" automatically... When you start RuckZuck.exe, you will find your "localURL" as REST-API URL:
 ![RuckZuck URL](https://user-images.githubusercontent.com/11909453/63156270-9c8ee480-c014-11e9-9a0f-09082691c87c.png)
 
-you can also configure your local RuckZuck Server with some registry keys:
+you can also configure your local RuckZuck Server by setting the following registry keys:
 ```
 if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Policies\RuckZuck") -ne $true) {  New-Item "HKLM:\SOFTWARE\Policies\RuckZuck" -force -ea SilentlyContinue };
 New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Policies\RuckZuck' -Name 'WebService' -Value "http://192.168.2.109:5000" -PropertyType String -Force -ea SilentlyContinue;
