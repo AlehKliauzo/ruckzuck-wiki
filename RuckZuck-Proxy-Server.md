@@ -34,7 +34,7 @@ The content within the container will be cleaned if you re-publish or update you
 
 # known Limitations
 * Only packages with valid URLs can be cached, URL's generated from a PowerShell will still be downloaded from the clients.
-* Some packages can not be downloaded from the Server. As workaround you can copy to content to **wwwroot/content/{contentid}**
+* Some packages can not be downloaded from the Server. As workaround you can copy the content to **wwwroot/content/{contentid}**
 * Download errors ca occur if multiple clients requesting the same fileand the file is not cached. As workaround, use RuckZuck.exe to pre-download files you will need.
 * The Server will not re-download content if the signature or file hash has changed. You will have to remove this content from **wwwroot/content/{contentid}**
 
