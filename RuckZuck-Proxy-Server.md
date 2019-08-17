@@ -1,4 +1,4 @@
-You can host a "local" RuckZuck Server to cache binaries locally.
+You can host an OnPrem RuckZuck Server to cache binaries locally.
 
 The easiest way is by running the ruckzuck Docker container from:
 https://cloud.docker.com/u/zanderr/repository/docker/zanderr/ruckzuck
@@ -16,7 +16,7 @@ docker run --name ruckzuck -d -e "localURL=http://192.168.2.109:5000" -p 5000:50
 >Note: the Variable localURL must represent the url to access the container
 
 # Verify
-As soon as the container is started, browse to your "localURL" and you will get the same page as on https://ruckzuck.tools
+As soon as the container is started, browse to your "localURL" and you will get the same page as on https://ruckzuck.tools .
 The Server will listen to broadcasts on UDP:5001, so RuckZuck clients within the same subnet should find the "Proxy" automatically... When you start RuckZuck.exe, you will find your "localURL" as REST-API URL:
 ![RuckZuck URL](https://user-images.githubusercontent.com/11909453/63156270-9c8ee480-c014-11e9-9a0f-09082691c87c.png)
 
