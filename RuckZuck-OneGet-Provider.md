@@ -1,10 +1,10 @@
 # Installation  
 Install the MSI (x64 only) from:
-https://github.com/rzander/ruckzuck/releases/download/1.7.0.4/RuckZuck.provider.for.OneGet_x64.msi
+https://github.com/rzander/ruckzuck/releases/download/1.7.0.5/RuckZuck.provider.for.OneGet_x64.msi
 
 or
 
-Install it from [RuckZuck.exe](https://github.com/rzander/ruckzuck/releases/download/1.7.0.4/RuckZuck.exe) ...
+Install it from [RuckZuck.exe](https://github.com/rzander/ruckzuck/releases/download/1.7.0.5/RuckZuck.exe) ...
 
 # Update
 Find all applicable Updates:  
