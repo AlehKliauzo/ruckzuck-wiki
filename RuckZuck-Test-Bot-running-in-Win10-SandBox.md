@@ -10,9 +10,14 @@ You can use the following XML File and save is as ".WSB" (Windows Sand Box) File
 </LogonCommand>
 </Configuration>
 ```
+To start the SandBox, just double-click the .WSB File...
+
 The SandBox will first download and run RZBot.exe (this can take a moment). RZBot.exe will connect to the RuckZuck Service Bus where all failed installations will queue up. If RZBot is able to install the Software without errors, the Software will be removed from the queue. At the end, only real failures will stay in the queue.
 
 # Requirements
 * Windows 10 (>= 1903) with SandBox-Feature enabled:  `Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online`
+
+#Things to know
 * The Tool will not start if there is any other Software installed, so you need a clean machine!
 * The Tool will stop after running for more than 6 hours
+* The Queue may contains software which is already updated.
