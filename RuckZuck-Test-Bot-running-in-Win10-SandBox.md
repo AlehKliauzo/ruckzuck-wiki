@@ -17,7 +17,7 @@ The SandBox will first download and run RZBot.exe (this can take a moment). RZBo
 # Requirements
 * Windows 10 (>= 1903) with SandBox-Feature enabled:  `Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online`
 
-#Things to know
+# Things to know
 * The Tool will not start if there is any other Software installed, so you need a clean machine!
 * The Tool will stop after running for more than 6 hours.
 * The Queue may contains software which is already updated.
