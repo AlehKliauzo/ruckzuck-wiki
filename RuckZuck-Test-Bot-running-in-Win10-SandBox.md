@@ -5,16 +5,14 @@ You can use the following XML File and save is as ".WSB" (Windows Sand Box) File
 <Configuration>
 <VGpu>Disable</VGpu>
 <Networking>Enable</Networking>
-<MappedFolders>
-   <MappedFolder>
-   </MappedFolder>
-</MappedFolders>
 <LogonCommand>
    <Command>powershell.exe -noexit -command "&amp; {cd $env:temp;if(-NOT (Test-Path RZBot.exe)) { $wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/rzander/ruckzuck/releases/download/1.7.0.5/RZBot.exe', """$env:temp\RZBot.exe""") };&amp;$env:temp\RZBot.exe}"</Command>
 </LogonCommand>
 </Configuration>
 ```
+The SandBox will first download and run RZBot.exe (this can take a moment). RZBot.exe will connect to the RuckZuck Service Bus where all failed installations will queue up. If RZBot is able to install the Software without errors, the Software will be removed from the queue. At the end, only real failures will stay in the queue.
 
 # Requirements
+* Windows 10 (>= 1903) with SandBox-Feature enabled:  `Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online`
+* The Tool will not start if there is any other Software installed, so you need a clean machine!
 * The Tool will stop after running for more than 6 hours
-* The Tool will not start if there is any Software installed, so you need a clean machine-
