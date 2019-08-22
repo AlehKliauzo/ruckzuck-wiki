@@ -19,5 +19,6 @@ The SandBox will first download and run RZBot.exe (this can take a moment). RZBo
 
 #Things to know
 * The Tool will not start if there is any other Software installed, so you need a clean machine!
-* The Tool will stop after running for more than 6 hours
+* The Tool will stop after running for more than 6 hours.
 * The Queue may contains software which is already updated.
+* RZBot will not increase the "Downloads" counter on Software.
