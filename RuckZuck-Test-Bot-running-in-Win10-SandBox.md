@@ -18,6 +18,7 @@ The SandBox will first download and run RZBot.exe (this can take a moment). RZBo
 * Windows 10 (>= 1903) with SandBox-Feature enabled:  `Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online`
 
 # Things to know
+* Do not run the RZ.Bot in an Environment with a local RuckZuck Server. The goal is to detect broken links etc. and this will not happen if a local Server is involved.
 * The Tool will not start if there is any other Software installed, so you need a clean machine!
 * The Tool will stop after running for more than 6 hours.
 * The Queue may contains software which is already updated.
