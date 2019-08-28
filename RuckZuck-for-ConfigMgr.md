@@ -18,6 +18,7 @@ With a Repository of over 400 Applications, RuckZuck for Configuration Manager c
 
 ### How to update from an older Version
 It's recommended to backup an older version (**RZ4CM.exe** and **RZ4CM.exe.config**) just for the case, you have to switch back. The Tools is a single executable located in the same Directory as the CM Console ( *..\Microsoft Configuration Manager\AdminConsole\bin* ). 
+>Note: RZ4CM.exe.config will be reverted to default after upgrading. It's not recommended to restore the old config file as there may be new options in the new file. Please compare the new and old .config file and copy your modifications to the new file.
 
 ### Installation
 You can download the Installer from [RuckZuck.tools](https://ruckzuck.tools). The Setup requires local Admin permission to extract the executable to **..\Microsoft Configuration Manager\AdminConsole\bin\RZ4CM.exe** and creates the extension in the Configuration Manager Console:
