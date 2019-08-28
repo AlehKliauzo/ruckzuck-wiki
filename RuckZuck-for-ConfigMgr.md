@@ -2,23 +2,25 @@ RuckZuck for Configuration Manager is a Console-Extension for System Center Conf
 
 With a Repository of over 400 Applications, RuckZuck for Configuration Manager can be used to manage and update 3rd Party Apps in Configuration Manager with just a few clicks...
 
+### What's new with V1.7.0.5
+- If the detection Method contains HKCU: the generated DeploymentType will run as User (instead of SYSTEM)
+- generated Bootstrap .exe's are using the V2 RuckZuck REST API
+
 ### What's new with V1.5.1.8
 - RZ4CM is now using the same UI as the [RuckZuck standalone Tool](http://ruckzuck.tools/default.aspx). 
 - The Tool is now able to detect updates for previously downloaded Apps in ConfigMgr. New Software Versions are listed in the UI so an Admin has the choice of what to update. 
 
 ### PreRequisites
 - Configuration Manager (Current Branch)
-- RZ4CM requires .NET 4.5
-- PowerShell 4 or higher on all Clients running imported Applications
+- RZ4CM requires .NET 4.6
+- PowerShell 5 or higher on all Clients running imported Applications
 - RZ4CM requires Internet Access to the RuckZuck-Repository and to download the source Files from the Vendors Pages.
 
 ### How to update from an older Version
-RZ4CM does **not** remove older Versions. Please remove older Version by using "Add-Remove Programs". 
-
-**Note:** The Tools is a single executable located in the same Directory as the CM Console ( *..\Microsoft Configuration Manager\AdminConsole\bin* ). It's recommended to backup an older version (**RZ4ConfigMgr.exe** and **RZ4ConfigMgr.exe.config**) just for the case, you have to switch back.
+It's recommended to backup an older version (**RZ4CM.exe** and **RZ4CM.exe.config**) just for the case, you have to switch back. The Tools is a single executable located in the same Directory as the CM Console ( *..\Microsoft Configuration Manager\AdminConsole\bin* ). 
 
 ### Installation
-You can download the Installer from [RuckZuck.tools](https://ruckzuck.codeplex.com/downloads/get/1536801). The Setup requires local Admin permission to extract the executable to **..\Microsoft Configuration Manager\AdminConsole\bin\RZ4CM.exe** and creates the extension in the Configuration Manager Console:
+You can download the Installer from [RuckZuck.tools](https://ruckzuck.tools). The Setup requires local Admin permission to extract the executable to **..\Microsoft Configuration Manager\AdminConsole\bin\RZ4CM.exe** and creates the extension in the Configuration Manager Console:
 <img src="/content/images/2017/06/Extension.png" alt="Extension" style="width: 300px;"/>
 
 ### Things to know
@@ -31,11 +33,10 @@ Be Aware the RuckZuck Repository is a common repository and not specific to Conf
 - The RuckZuck standalone-tool can check prerequisites more granular as ConfigMgr, so you may loose these PreReq checks on the ConfigMgr Application
 - RuckZuck standalone can detect and download content for different languages. RZ4CM will only download content for the current langue.
 - Everyone is allowed to create an publish Software in the RuckZuck Repository until:
- - The Product can be installed silently
- - The content is downloaded from the Vendors Web-Site and the link is not password protected
- - The Product does not contain Malware, AdWare or any other illegal Code
-- A RuckZuck Username and Password is required to get the Meta-Data of the Apps (right click -> edit). Register on [RuckZuck.tools](https://ruckzuck.tools/Account/Register.aspx)
-- There are two ways to import Applications:
+  - The Product can be installed silently
+  - The content is downloaded from the Vendors Web-Site and the link is not password protected
+  - The Product does not contain Malware, AdWare or any other illegal Code
+- There are two ways to import Applications into ConfigMgr:
 ![](/content/images/2017/06/RZ4CM.png)
   - "Download files and create CM App.." will download the full content when creating the App. Clients can get all the files from a local DP.
   - "Create App with Bootstrap.exe" will generate a little executable (~60KB). This .exe will download the required content from the Internet when running. This allows to save disk-space in DEMO environment or to reduce Network-traffic in scenarios where the Clients are accessing the DP over Internet.
