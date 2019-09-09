@@ -60,3 +60,11 @@ Depending on the order of the Plugin DLL's, it will first lookup in the local st
 ## Content
 If RZ.Server detects the binaries of a Software in ```wwwroot\content\{contentid}```, it will redirect the download-URL to the local RZ.Server. Otherwise the download URL from the Software definition will be used. 
 If **RZ.Plugin.Software.Proxy.dll** is in use, it will download the binaries on the first request to ```wwwroot\content\{contentid}``` so that clients will use RZ.Server as a caching proxy.
+
+# Redirect RuckZuck agents
+RuckZuck agents will find the RZ.Server by using UDP Broadcasts or by a hardcoded Registry-Key:
+```
+if((Test-Path -LiteralPath "HKLM:\SOFTWARE\Policies\RuckZuck") -ne $true) {  New-Item "HKLM:\SOFTWARE\Policies\RuckZuck" -force -ea SilentlyContinue };
+New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Policies\RuckZuck' -Name 'WebService' -Value "http://192.168.2.109:5000" -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKLM:\SOFTWARE\Policies\RuckZuck' -Name 'Broadcast' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+```
