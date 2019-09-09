@@ -34,5 +34,29 @@ To host a complete standalone Server, remove all *.proxy.dll's from the plugins 
 >**Note:** a Standalone Server comes with an empty repository and is unable to detect any software updates (RZ.Plugin.SWLookup.Proxy.dll is required to detect Updates)
 
 ## Catalog extensions
-To add a Software to the Catalog, place a RuckZuck-JSON file in ```wwwroot\repository```. The Filename must match with the Shortname of the Software.
->**Note:** RuckZuck does cache the Catalog. Restart the Server to reload the Catalog from the JSON-Files. 
+To add a Software to the Catalog, place a RuckZuck-JSON file in ```wwwroot\repository```. The Filename must match with the Shortname of the Software. The Server contains an example for ```DevCDRAgent```.
+>**Note:** RZ.Server does cache the entire Catalog. Restart the Server to reload the Catalog from the JSON-Files. Also delete the local Catalog-Cache ```%TEMP%\rzcat.json``` on your client(s) or wait 30min. 
+
+## Catalog removals
+To remove a Software from the Catalog, place a JSON file in ```wwwroot\repository``` that just contains the **ShortName** Property.
+Example ```ruckzuck provider for oneget.json```:
+```JSON
+[
+    {
+        "ShortName": "RuckZuck provider for OneGet"
+    }
+]
+```
+... this will remove ```RuckZuck provider for OneGet``` from the Catalog.
+
+## Software definitions
+**RZ.Plugin.Software.dll** will check for Software definitions in: ```wwwroot\repository\{manufacturer}\{productname}\{productversion}\{shortname}.json```
+
+To e.g. host a customized version of ```Visual Studio Code```, place your RuckZuck-Json file in ```wwwroot\repository\microsoft corporation\microsoft visual studio code\1.38.0\code.json``` 
+and restart the RZ.Server. 
+
+Depending on the order of the Plugin DLL's, it will first lookup in the local store and if nothing is found in the public RuckZuck.tools Repository. This allows to override public packages with custom parameters or additional files/commands.
+
+## Content
+If RZ.Server detects the binaries of a Software in ```wwwroot\content\{contentid}```, it will redirect the download-URL to the local RZ.Server. Otherwise the download URL from the Software definition will be used. 
+If **RZ.Plugin.Software.Proxy.dll** is in use, it will download the binaries on the first request to ```wwwroot\content\{contentid}``` so that clients will use RZ.Server as a caching proxy.
