@@ -12,6 +12,9 @@ To host a "private" repository, there are two options possible:
 Download: https://github.com/rzander/ruckzuck/releases/download/1.7.0.5/RZ.Server.Proxy.zip
 
 # Run
+If you start RZ.Server.exe (or call ```dotnet .\RZ.Server.dll```), you should see a screen like:
+![console.png](https://user-images.githubusercontent.com/11909453/64550526-669f0080-d333-11e9-8d5b-0519db1bec18.png)
 
+You can now open a browser and open http:\\localhost:5000 to get the same Web-Frontend as on https://ruckzuck.tools  
 
 # Configuration
