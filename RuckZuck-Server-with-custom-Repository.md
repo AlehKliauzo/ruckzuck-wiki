@@ -19,12 +19,13 @@ You can now open a browser and open http:\\localhost:5000 to get the same Web-Fr
 
 # Configuration
 ## Plugins
-Access to the Backuend/Repository is handled with Plugins located in ```wwwroot\plugins```. The default RZ.Server does have the following plugins:
+Access to the Back-end/Repository is handled with Plugins located in ```wwwroot\plugins```. The default RZ.Server does have the following plugins:
 - RZ.Plugin.Catalog.dll
 - RZ.Plugin.Catalog.Proxy.dll
-- RZ.Plugin.Feedback.dll
+- RZ.Plugin.Feedback.Proxy.dll
 - RZ.Plugin.Software.dll
 - RZ.Plugin.Software.Proxy.dll
 - RZ.Plugin.SWLookup.Proxy.dll
 
-Plugins will internally handled in an alphabetic order e.g. all Catalog requests will first sendt to RZ.Plugin.Catalog.dll and as 2nd attempt to RZ.Plugin.Catalog.Proxy.dll 
+Plugins will internally handled in an alphabetic order e.g. all "Catalog" requests will first sent to RZ.Plugin.Catalog.dll and as 2nd attempt to RZ.Plugin.Catalog.Proxy.dll 
+All Plugins ending with "Proxy.dll" will act as Proxy and forward the requests to the public RuckZuck.tools API.
