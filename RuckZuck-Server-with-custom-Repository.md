@@ -52,7 +52,7 @@ Example ```ruckzuck provider for oneget.json```:
 ## Software definitions
 **RZ.Plugin.Software.dll** will check for Software definitions in: ```wwwroot\repository\{manufacturer}\{productname}\{productversion}\{shortname}.json```
 
-To e.g. host a customized version of ```Visual Studio Code```, place your RuckZuck-Json file in ```wwwroot\repository\microsoft corporation\microsoft visual studio code\1.38.0\code.json``` 
+E.g. to host a customized version of ```Visual Studio Code```, place your RuckZuck-Json file in ```wwwroot\repository\microsoft corporation\microsoft visual studio code\1.38.0\code.json``` 
 and restart the RZ.Server. 
 
 Depending on the order of the Plugin DLL's, it will first lookup in the local store and if nothing is found in the public RuckZuck.tools Repository. This allows to override public packages with custom parameters or additional files/commands.
