@@ -15,7 +15,7 @@ Download and extract the latest RZ.Server binaries: https://github.com/rzander/r
 If you start RZ.Server.exe (or call ```dotnet .\RZ.Server.dll```), you should see a screen like:
 ![console.png](https://user-images.githubusercontent.com/11909453/64550526-669f0080-d333-11e9-8d5b-0519db1bec18.png)
 
-You can now open a browser and open "http://localhost:5000" to get the same Web-Frontend as https://ruckzuck.tools  
+You can now open "http://localhost:5000" to get the same Web-Frontend as https://ruckzuck.tools  
 
 # Configuration
 ## Plugins
