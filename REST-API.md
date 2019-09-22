@@ -18,7 +18,8 @@ Invoke-RestMethod -Uri "https://ruckzuck.tools/rest/v2/geturl"
 
 ## PowerShell Example:
 ```powershell 
-$cat = Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/getcatalog"
+$url = Invoke-RestMethod -Uri "https://ruckzuck.tools/rest/v2/geturl"
+$cat = Invoke-RestMethod -Uri "$($url)/rest/v2/getcatalog"
 $cat | select ShortName, Downloads | Sort-Object ShortName
 ```
 
