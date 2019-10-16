@@ -75,7 +75,7 @@ Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/getsoftwares?name=ruc
 
 # Get Icon 
 + Description: get the product icon 
-+ Syntax: **GET** ` https://{URL}/geticon[?shortname={product shortname}][?iconhash={MD5 hash of the icon}][&size={size in px})`  
++ Syntax: **GET** ` https://{URL}/geticon[?shortname={product shortname}][?iconhash={MD5 hash of the icon}][&size={size in px}]`  
 + Response: Bitmap (binary)
 ## PowerShell Example:
 ```powershell 
