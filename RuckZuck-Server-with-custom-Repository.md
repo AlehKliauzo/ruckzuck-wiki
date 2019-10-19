@@ -9,7 +9,7 @@ To host a "private" repository, there are two options possible:
 * .NET Core 2.2
   * IIS hosting: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/?view=aspnetcore-2.2
 # Installation
-Download and extract the latest RZ.Server binaries: https://github.com/rzander/ruckzuck/releases/download/1.7.0.5/RZ.Server.Proxy.zip
+Download and extract the latest RZ.Server binaries: https://github.com/rzander/ruckzuck/releases/download/1.7.1.0/RZ.Server.Proxy.zip
 
 # Run
 If you start RZ.Server.exe (or call ```dotnet .\RZ.Server.dll```), you should see a screen like:
