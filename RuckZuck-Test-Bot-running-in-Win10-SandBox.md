@@ -6,7 +6,7 @@ You can use the following XML File and save is as ".WSB" (Windows Sand Box) File
 <VGpu>Disable</VGpu>
 <Networking>Enable</Networking>
 <LogonCommand>
-   <Command>powershell.exe -noexit -command "&amp; {cd $env:temp;if(-NOT (Test-Path RZBot.exe)) { $wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/rzander/ruckzuck/releases/download/1.7.1.0/RZBot.exe', """$env:temp\RZBot.exe""") };&amp;$env:temp\RZBot.exe}"</Command>
+   <Command>powershell.exe -noexit -command "&amp; {cd $env:temp;if(-NOT (Test-Path RZBot.exe)) { $wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/rzander/ruckzuck/releases/download/1.7.1.2/RZBot.exe', """$env:temp\RZBot.exe""") };&amp;$env:temp\RZBot.exe}"</Command>
 </LogonCommand>
 </Configuration>
 ```
