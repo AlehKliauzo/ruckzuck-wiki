@@ -4,12 +4,12 @@ RuckZuck for Intune is a standalone tool to create Intune Win32Lob Applications 
 What it does:
 * Connect Intune by using Graph API to check for outdated RuckZuck-Applications
 * User can select Applictions to create...
-* download the required Files to %TEMP%\{ContentID}
+* download the required Files to %TEMP%\\{ContentID}
 * (Install Nuget Module if missing)
 * (Install AzureAD PowerShell Module if missing)
 * (download IntuneWinAppUtil.exe from https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool to %TEMP%\intunewin)
 * extract PowerShell script to upload App (Script is based on https://github.com/microsoftgraph/powershell-intune-samples/tree/master/LOB_Application) to %TEMP%\intunewin
-* generate install.ps1, uninstall.ps1, detection.ps1, requirements.ps1 and logo.png in %TEMP%\{ContentID}
+* generate install.ps1, uninstall.ps1, detection.ps1, requirements.ps1 and logo.png in %TEMP%\\{ContentID}
 * run IntuneWinAppUtil.exe to generate *.intunewin File in %TEMP%\intunewin
 * run PowerShell to create and upload Application in Intune.
 
