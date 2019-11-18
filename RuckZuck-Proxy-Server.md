@@ -1,7 +1,7 @@
 You can host an OnPrem RuckZuck Server to cache binaries locally.
 
 The easiest way is by running the ruckzuck Docker container from:
-https://cloud.docker.com/u/zanderr/repository/docker/zanderr/ruckzuck
+https://hub.docker.com/r/zanderr/ruckzuck
 
 # Installation
 Get the container:
