@@ -24,6 +24,8 @@ What it does:
 # Known Issues
 * You have to "Run as Admin" for the first use (to install nuget and AzureAD module)
 * AzureAD Token from the first Login is not forwarded to the PowerShell-Script, so you may have to logon again
+* Dependencies ar not created in intune, you have to do this manually.
+* Some apps can have issues with the requirement rules. If you get a  "requirements not met" message in CompanyPortal, just define your own requirement rules in Intune...
 
 # Download
 Get a preview Version:
