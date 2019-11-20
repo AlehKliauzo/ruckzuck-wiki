@@ -26,6 +26,7 @@ What it does:
 * AzureAD Token from the first Login is not forwarded to the PowerShell-Script, so you may have to logon again
 * Dependencies are not created in Intune, you have to do this manually.
 * Some apps can have issues with the requirement rules. If you get a  "requirements not met" message in CompanyPortal, just define your own requirement rules in Intune...
+* PreRequisite Apps are generate multiple times in Intune as the tool does not check if the App already exists
 
 # Download
 Get a preview Version:
