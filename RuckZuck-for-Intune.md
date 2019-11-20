@@ -27,7 +27,7 @@ What it does:
 * Dependencies are not created in Intune, you have to do this manually.
 * Some apps can have issues with the requirement rules. If you get a  "requirements not met" message in CompanyPortal, just define your own requirement rules in Intune...
 * PreRequisite Apps are generate multiple times in Intune as the tool does not check if the App already exists
-* *AdobeReader DC* and *AdobeReader DC MUI* do expect to have a previous Version of AdobeReader installed. 
+* ~~*AdobeReader DC* and *AdobeReader DC MUI* do expect to have a previous Version of AdobeReader installed.~~
 * Sometimes the SW has a status *Failed* in CompanyPortal but SW is installed. If you retry, the installation state switches to *Installed*
 
 # Download
