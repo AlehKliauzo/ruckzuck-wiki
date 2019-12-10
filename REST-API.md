@@ -1,6 +1,6 @@
 # Get URL:
 + Description: get the current REST-API URL. CustomerID can be used in the future to redirect to private or custom repositories.
-+ Syntax: **GET** ` https://ruckzuck.tools/geturl[?customerid={customerkey}]`  
++ Syntax: **GET** ` https://ruckzuck.tools/rest/v2/geturl[?customerid={customerkey}]`  
 + Response: string with current URL of the REST API
 
 ## PowerShell Example:
