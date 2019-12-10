@@ -13,7 +13,7 @@ Invoke-RestMethod -Uri "https://ruckzuck.tools/rest/v2/geturl"
 
 # Get Catalog:
 + Description: get all Software-Products in the RuckZuck repository  
-+ Syntax: **GET** ` https://{URL}/getcatalog[?customerid={customerkey}]`  
++ Syntax: **GET** ` https://ruckzuck.tools/rest/v2/geturl[?customerid={customerkey}]`  
 + Response: JSON Array of Catalog-Items
 
 ## PowerShell Example:
@@ -83,3 +83,95 @@ Invoke-RestMethod -Uri "https://cdn.ruckzuck.tools/rest/v2/geticon?size=32&short
 ```
 as URL
 [`https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck`](https://cdn.ruckzuck.tools/rest/v2/geticon?shortname=ruckzuck)
+
+# API entities
+C# classes with a few comments that represent entities returned by API. Note: API always returns collection of these entities.
+
+```C#
+    /// <summary>
+    /// Entities returned by getcatalog API request, contain basic info about software package in RuckZuck repo
+    /// </summary>
+    public class CatalogItem
+    {
+        public DateTime Timestamp { get; set; }
+        public string Description { get; set; }
+        public int Downloads { get; set; }
+        public string IconHash { get; set; }
+        public string Manufacturer { get; set; }
+        /// <summary>
+        /// Date when current version of package was added to RuckZuck repo
+        /// </summary>
+        public DateTime? ModifyDate { get; set; }
+        public string ProductName { get; set; }
+        public string ProductURL { get; set; }
+        public string ProductVersion { get; set; }
+        public string ShortName { get; set; }
+        public string[] Categories { get; set; }
+        /// <summary>
+        /// SoftwareId uniquely identifies a package. If package version is updated it will be assigned a new SWId.
+        /// </summary>
+        public int SWId { get; set; }
+    }
+
+    /// <summary>
+    /// Entities returned by getsoftwares API request, contain all info about software package in RuckZuck repo
+    /// </summary>
+    public class SoftwareInfo
+    {
+        public string ProductName { get; set; }
+        public string Manufacturer { get; set; }
+        public string Description { get; set; }
+        public string Shortname { get; set; }
+        public string ProductURL { get; set; }
+        public string ProductVersion { get; set; }
+        public string MSIProductID { get; set; }
+        public string Architecture { get; set; }
+        public string PSUninstall { get; set; }
+        /// <summary>
+        /// Script that determines if package is already installed, usually by checking registry
+        /// </summary>
+        public string PSDetection { get; set; }
+        /// <summary>
+        /// Install script, part 2 of 3, all packages have it.
+        /// </summary>
+        public string PSInstall { get; set; }
+        /// <summary>
+        /// A prerequisite for running PSDetection script. If it returns $true PSDetection can be run.
+        /// </summary>
+        public string PSPreReq { get; set; }
+        /// <summary>
+        /// Install script, part 1 of 3, only some packages have it
+        /// </summary>
+        public string PSPreInstall { get; set; }
+        /// <summary>
+        /// Install script, part 3 of 3, only some packages have it
+        /// </summary>
+        public string PSPostInstall { get; set; }
+        public string ContentID { get; set; }
+        public List<File> Files { get; set; }
+        public string Category { get; set; }
+        /// <summary>
+        /// Contains package dependencies (mostly VCRedist/.NET/Java, sometimes other apps).
+        /// </summary>
+        public string[] PreRequisites { get; set; }
+        /// <summary>
+        /// SoftwareId uniquely identifies a package. If package version is updated it will be assigned a new SWId.
+        /// </summary>
+        public int SWId { get; set; }
+        public string IconHash { get; set; }
+        public string IconURL { get; set; }
+    }
+
+    public class File
+    {
+        public string URL { get; set; }
+        public string FileName { get; set; }
+        public string FileHash { get; set; }
+        /// <summary>
+        /// Can be one of the following:
+        /// "X509" - FileHash contains certificate hash of signed file
+        /// "MD5" - FileHash contains MD5
+        /// </summary>
+        public string HashType { get; set; }
+        public long? FileSize { get; set; }
+    }
